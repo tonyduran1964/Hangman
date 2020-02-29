@@ -1,11 +1,3 @@
-/* Variabes */  
-$orange: #ffa600;
-$green: #c1d72e;
-$blue: #3456FF;
-$grey:#f3f3f3;
-$white: #fff;
-$red:#f34;
-$base-color:#000 ;
 
 /* Mixin's */ 
 
@@ -44,7 +36,6 @@ $base-color:#000 ;
 @mixin opacity {
   opacity:0.4;
   filter:alpha(opacity=40); 
-  @include fade;
 }
 
 @mixin corners ($radius) {
@@ -55,16 +46,15 @@ $base-color:#000 ;
 }
 
 body {
-  background:$base-color;
+  background:#000;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  color:$white;
+  color:#fff;
   height:100%;
   text-align:center;
   font-size:18px;
 }
 
 .wrappper{
-  @include clear;
   width:100%;
   margin:0 auto;
 }
@@ -75,8 +65,8 @@ body {
 }
 
 canvas{
-  color:$white;
-  border: $red dotted 5px;
+  color:#fff;
+  border: #f34 dotted 5px;
   padding:15px;
  
 }
@@ -86,7 +76,7 @@ h1, h2, h3 {
 	font-weight: 100;
 	text-transform: uppercase;
    margin:5px 0;
-  color: $blue
+  color: #3456FF;
 }
 
 h1 {
@@ -99,11 +89,10 @@ h2 {
 
 p{
   font-size: 1.6em;
-  color:$blue;
+  color:#3456FF;
 }
 
 #alphabet {
-  @include clear;
   margin:15px auto;
   padding:0;
   max-width:900px;
@@ -116,17 +105,11 @@ p{
   width:35px;
   height:30px;
   padding-top:10px;
-  background:$red;
-  color:$base-color;
+  background:#f34;
+  color:#000;
   cursor:pointer;
-  @include corners(5px);
-  border: solid 1px $white;
+  border: solid 1px #fff;
     
-    &:hover{
-      background:$base-color;
-      border: solid 1px $white;
-      color:$white;
-    }
 }
 
 #hint, #reset {
@@ -135,17 +118,11 @@ p{
   width:90px;
   height:70px;
   padding-top:10px;
-  background:$red;
-  color:$base-color;
+  background:#f34;
+  color:#000;
   cursor:pointer;
-  @include corners(5px);
-  border: solid 1px $white;
+  border: solid 1px #fff;
     
-    &:hover{
-      background:$base-color;
-      border: solid 1px $white;
-      color:$white;
-    }
 }
 
 #my-word {
@@ -164,13 +141,8 @@ p{
 }
 
 .active {
-  @include opacity;
   cursor:default;
     
-  &:hover{
-      @include fade;
-      @include opacity;
-    }
 }
 
 #mylives{
@@ -180,10 +152,9 @@ p{
 }
 
 button{
-  @include corners (5px);
-  background:$base-color;
-  color:$white;
-  border: solid 1px $white;
+  background:#000;
+  color:#fff;
+  border: solid 1px #fff;
   text-decoration:none;
   cursor:pointer;
   font-size:1.2em;
@@ -192,12 +163,6 @@ button{
   margin: 10px;
   outline: none;
   
-    &:hover{
-      @include transition;
-      background:$white;
-      border: solid 1px $white;
-      color:$base-color;
-    }
 }
 
 @media (max-width: 767px) {
@@ -214,7 +179,7 @@ button{
   }
 
 #hold {
-  color:$red;
+  color:#f34;
 }
 
 #clue {
